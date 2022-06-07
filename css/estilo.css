@@ -19,7 +19,7 @@ p{
     font-family: 'Work Sans', sans-serif;
 }
 nav{
-    padding: 10px;
+    padding: auto;
     text-align: center;       
 }
 .menu{
@@ -45,13 +45,15 @@ nav{
 body{
     background-color: black;
     color: white;
-    margin: 20px;
-    padding: 20px;
+    margin: auto;
+    padding: auto;
 }
 .main1{
     width: auto;
-    height: 500px;     
+    height: 500px;
 }
+
+
 .seccion1{
     display: flex;
     flex-direction: row-reverse;    
@@ -68,6 +70,8 @@ h2{
 .canciones1 a{
     text-decoration: none;
     color: white;
+    margin: 5px;
+    padding: 5px;
 }
 .canciones1 a:hover{
     text-decoration: underline;
