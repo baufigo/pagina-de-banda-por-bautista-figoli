@@ -1,3 +1,53 @@
+@mixin integrantes-izq {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 20px;
+    border: white solid;
+    width: 500px;  
+}
+@mixin integrantes-der {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 20px;
+    border: white solid;
+    width: 500px;
+    position: relative;
+    left: 750px;
+}
+@mixin parrafos {
+    margin: 5px;
+}    
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    width: auto;
+}
+h1{
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    text-decoration: underline;
+    color: white;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+p{
+    font-family: 'Work Sans', sans-serif;
+}
+body{
+    background-color: black;
+    color: white;
+    margin: auto;
+    padding: auto;
+}
+h2{
+    margin: 10px;
+    padding: 10px;
+    text-decoration: underline;
+    position: relative;
+}
 .main1{
     width: auto;
     height: 500px;
@@ -30,4 +80,69 @@
             text-decoration: underline;
         }
     }
+}
+.seccion3{
+    width: 1250px;
+} 
+.seccion4{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    .imagen1{
+        @include integrantes-izq();
+        .parrafo2{
+            @include parrafos();
+        }    
+    }
+    
+    .imagen2{
+        @include integrantes-der();
+        .parrafo3{
+            @include parrafos();
+        }
+    }
+    .imagen3{
+        @include integrantes-izq();
+        .parrafo4{
+            @include parrafos();
+        }
+    }
+    .imagen4{
+        @include integrantes-der();
+        .parrafo5{
+            @include parrafos();
+        }
+    }
+    .imagen5{
+        @include integrantes-izq();
+        .parrafo6{
+            @include parrafos();
+        }
+    }            
+}
+
+.seccion5{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 700px;
+    grid-template-areas: 
+    "parrafo7 imagen6"
+    "parrafo8 parrafo8";
+    .parrafo8{
+        grid-area: parrafo8;
+    }
+}
+.seccion6{
+    height: 300px;
+}
+.seccion7{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "portada1 portada2 portada3";
+}
+.formulario1{
+    width: 400px;
 }
